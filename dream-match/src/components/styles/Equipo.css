@@ -75,6 +75,9 @@
     height: 150px;
     width: 150px;
     border-radius: 20px;
+    color:#00e900;
+    font-family: 'cali';
+    font-size: 30px;
 }
 .nombre-P{
     color:rgb(0, 218, 0);

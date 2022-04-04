@@ -18,9 +18,9 @@ function App() {
        <Route exact path='/teams' element = {<Teams/>}/>
        <Route exact path='/team1' element = {<Team1/>}/>
        <Route exact path='/team2' element = {<Team2/>}/>
-       <Route exact path='/leagues' element = {<Leagues/>}/>
-       <Route exact path='/clubs/:league' element = {<Clubs/>}/>
-       <Route exact path='/clubPlayers/:club' element = {<ClubPlayers/>}/>
+       <Route exact path='/leagues/:edit' element = {<Leagues/>}/>
+       <Route exact path='/clubs/:league/:edit' element = {<Clubs/>}/>
+       <Route exact path='/clubPlayers/:club/:edit' element = {<ClubPlayers/>}/>
        <Route exact path='/player/:name' element = {<Player/>}/>
      </Routes>
    </div>

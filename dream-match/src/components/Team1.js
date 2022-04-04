@@ -6,20 +6,18 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import editor from './media/edit.png';
-import { editName1 } from "../actions/actions";
+import { editName1,} from "../actions/actions";
 
 export default function Team1(){
 
     const dispatch = useDispatch();
     const nombre = useSelector((state)=>state.Nombre1);
-    const jugador1 = useSelector((state)=>state.jugador11);
-    const jugador2 = useSelector((state)=>state.jugador12);
-    const jugador3 = useSelector((state)=>state.jugador13);
-    const jugador4 = useSelector((state)=>state.jugador14);
-    const jugador5 = useSelector((state)=>state.jugador15);
+    const jugadores = useSelector((state)=>state.jugadores);
+    const jugadores1 = [jugadores[0],jugadores[1],jugadores[2],jugadores[3],jugadores[4]]
+    console.log(jugadores1);
     const [edit, setEdit] = useState('false')
 
-    console.log(nombre);
+    console.log(jugadores1);
 
     function handleEdit(e){
         e.preventDefault();
@@ -35,6 +33,7 @@ export default function Team1(){
             setEdit(!edit);
         }
     }
+
 
     return(
         <div>
@@ -58,46 +57,25 @@ export default function Team1(){
                 }
             </div>
             <div className="content-players">
-                <div className="content-player">
-                    <img alt="foto" className="photo" src={player}/>
-                    <h2 className="nombre-P">- {jugador1[0]} -</h2>
-                    <h2 className="nombre-P">- {jugador1[1]} -</h2>
-                    <Link className="link" to='/leagues'>
-                    <button className="enter1">Editar</button>
-                    </Link>
-                </div>
-                <div className="content-player">
-                    <img alt="foto" className="photo" src={player}/>
-                    <h2 className="nombre-P">- {jugador2[0]} -</h2>
-                    <h2 className="nombre-P">- {jugador2[1]} -</h2>
-                    <Link className="link" to='/leagues'>
-                    <button className="enter1">Editar</button>
-                    </Link>
-                </div>
-                <div className="content-player">
-                    <img alt="foto" className="photo" src={player}/>
-                    <h2 className="nombre-P">- {jugador3[0]} -</h2>
-                    <h2 className="nombre-P">- {jugador3[1]} -</h2>
-                    <Link className="link" to='/leagues'>
-                    <button className="enter1">Editar</button>
-                    </Link>
-                </div>
-                <div className="content-player">
-                    <img alt="foto" className="photo" src={player}/>
-                    <h2 className="nombre-P">- {jugador4[0]} -</h2>
-                    <h2 className="nombre-P">- {jugador4[1]} -</h2>
-                    <Link className="link" to='/leagues'>
-                    <button className="enter1">Editar</button>
-                    </Link>
-                </div>
-                <div className="content-player">
-                    <img alt="foto" className="photo" src={player}/>
-                    <h2 className="nombre-P">- {jugador5[0]} -</h2>
-                    <h2 className="nombre-P">- {jugador5[1]} -</h2>
-                    <Link className="link" to='/leagues'>
-                    <button className="enter1">Editar</button>
-                    </Link>
-                </div>
+            {
+                jugadores1.map((j)=>{
+                    return(
+                        <div className="content-player">
+                            {
+                                j.img != '' ?
+                                <img alt="foto" className="photo" src={j.img}/>
+                                :
+                                <img alt="foto" className="photo" src={player}/>
+                            }
+                        <h2 className="nombre-P">- {j.nombre} -</h2>
+                        <h2 className="nombre-P">- {j.posición} -</h2>
+                        <Link className="link" to={'/leagues/' + j.id}>
+                        <button className="enter1" name={j.nombre}>Editar</button>
+                        </Link>
+                    </div>
+                    )
+                })
+            }
             </div>
         </div>
     )

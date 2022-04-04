@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Clubs(){
 
-    let {league} = useParams();
+    let {league, edit} = useParams();
 
     const european = [
         {nombre:'Atalanta' ,img:'https://apiv3.apifootball.com/badges/85_atalanta.jpg', id:85},                    {nombre:'Lyon' ,img:'https://apiv3.apifootball.com/badges/3815_lyon.jpg' , id:3815},
@@ -54,7 +54,7 @@ export default function Clubs(){
                    {
                        european.map((team)=>{
                            return(
-                            <Link className="link" to={'/clubPlayers/' + team.id}>
+                            <Link className="link" to={'/clubPlayers/' + team.id + '/' + edit}>
                             <div className="equipo">
                                 <img src = {team.img}/>
                                 <h2>{team.nombre}</h2>
@@ -72,7 +72,7 @@ export default function Clubs(){
                    {
                        champions.map((team)=>{
                            return(
-                            <Link className="link" to={'/clubPlayers/' + team.id}>
+                            <Link className="link" to={'/clubPlayers/' + team.id + '/' + edit}>
                             <div className="equipo">
                                 <img src = {team.img}/>
                                 <h2>{team.nombre}</h2>
@@ -90,7 +90,7 @@ export default function Clubs(){
                    {
                        sudamericana.map((team)=>{
                            return(
-                            <Link className="link" to={'/clubPlayers/' + team.id}>
+                            <Link className="link" to={'/clubPlayers/' + team.id + '/' + edit}>
                             <div className="equipo">
                                 <img src = {team.img}/>
                                 <h2>{team.nombre}</h2>
@@ -108,7 +108,7 @@ export default function Clubs(){
                    {
                        argentina.map((team)=>{
                            return(
-                            <Link className="link" to={'/clubPlayers/' + team.id}>
+                            <Link className="link" to={'/clubPlayers/' + team.id + '/' + edit}>
                             <div className="equipo">
                                 <img src = {team.img}/>
                                 <h2>{team.nombre}</h2>

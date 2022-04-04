@@ -2,4 +2,78 @@ b7f58e3214206343c8c459ab4567ce8f65a6f4a10a9bb75f6ff480126dde0a0e
 
 kautarol
 
+UEFA Liga Europea:
+Atalanta - 85
+Barcelona - 97
+Betis - 7261
+Braga - 156
+Frankfurt - 3945
+Galatasaray - 192
+Leipzig - 101
+Leverkusen - 143
+Lyon - 3815
+Monaco - 3817
+Porto - 81
+Rangers - 146
+Red Star - 112
+Sevilla - 89
+Spartak Moscow - 6287
+West Ham - 3081
+
+UEFA Champions League:
+Ajax - 86
+Atletico Madrid - 73
 Bayern Munich - 72
+Benfica - 147
+Chelsea - 88
+Inter Milan - 79
+Juventus - 96
+Lille - 160
+Liverpool - 84
+Manchester City - 80
+Manchester United - 102
+PSG - 100
+Real Madrid - 76
+Salzburg - 74
+Sporting Lisbon - 177
+Villarreal - 162
+
+Copa Sudamericana:
+América de Cali - 561
+Arsenal - 997
+Atlético Paranaense - 551
+Deportivo Táchira - 8031
+Gremio - 558
+Independiente - 999
+Independiente Valle - 543
+Junior - 544
+LDU Quito - 555
+Libertad - 571
+Nacional - 562
+Peñarol - 552
+RB Bragantino - 2015
+Rosario Central - 992
+Santos - 566
+Sporting Cristal - 5748
+
+Copa Argentina:
+Argentinos Juniors - 995
+Banfield - 991
+Boca Juniors - 570
+Defensa y Justicia - 568
+Estudiantes Río Cuarto - 932 
+Gimnasia La Plata - 1002
+Godoy Cruz - 994
+Patronato - 1008
+Racing Club - 563
+River Plate - 554 
+San Telmo - 944
+Sarmiento - 1005
+Talleres de Córdoba - 1003
+Temperley - 929
+Tigre - 549
+Villa San Carlos - 924
+
+
+
+

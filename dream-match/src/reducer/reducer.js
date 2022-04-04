@@ -1,20 +1,24 @@
 
 const initialState = {
+    Plantel:[],
+
+    
+    jugadores:[ {id:11, nombre: 'jugador 1', posición: 'posición', img: ''},
+     {id:12, nombre: 'jugador 2', posición: 'posición', img: ''},
+     {id:13, nombre: 'jugador 3', posición: 'posición', img: ''},
+     {id:14, nombre: 'jugador 4', posición: 'posición', img: ''},
+     {id:15, nombre: 'jugador 5', posición: 'posición', img: ''},
+     {id:21, nombre: 'jugador 1', posición: 'posición', img: ''},
+     {id:22, nombre: 'jugador 2', posición: 'posición', img: ''},
+     {id:23, nombre: 'jugador 3', posición: 'posición', img: ''},
+     {id:24, nombre: 'jugador 4', posición: 'posición', img: ''},
+     {id:25, nombre: 'jugador 5', posición: 'posición', img: ''},
+    ],
+
     Nombre1: 'Equipo uno',
-    jugador11:['jugador 1', 'posición'],
-    jugador12:['jugador 2', 'posición'],
-    jugador13:['jugador 3', 'posición'],
-    jugador14:['jugador 4', 'posición'],
-    jugador15:['jugador 5', 'posición'],
-    playerList1: [],
     Save1: false,
+
     Nombre2: 'Equipo dos',
-    jugador21:['jugador 1', 'posición'],
-    jugador22:['jugador 2', 'posición'],
-    jugador23:['jugador 3', 'posición'],
-    jugador24:['jugador 4', 'posición'],
-    jugador25:['jugador 5', 'posición'],
-    PlayerList2:[],
     Save2: false
 }
 
@@ -25,6 +29,31 @@ function rootReducer(state = initialState, action){
                 ...state,
                 Nombre1: action.payload
             }
+        case 'GET_PLANTEL':
+            return{
+                ...state,
+                Plantel: action.payload[0]
+            }
+            case 'PUT_PLAYER':
+                console.log(action.id);
+                return{
+                    ...state,
+                    jugadores: state.jugadores.map(j=>{
+                        if(j.id === parseInt(action.id)){
+                            console.log(j);
+                            return {...j,
+                                nombre: action.player,
+                                posición: action.position,
+                                img: action.img
+                            }
+                        }
+                        return{
+                            ...j,
+                          
+                        }
+                    })
+
+                }
         default:
             return state;
     }
