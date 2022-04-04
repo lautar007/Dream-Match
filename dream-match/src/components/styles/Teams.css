@@ -1,0 +1,60 @@
+.arrow1{
+    transform: rotate(180deg);
+    position: absolute;
+    left: 70px;
+}
+.arrow2{
+    position: absolute;
+    right: 70px;
+}
+.ex1{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    transform: rotate(180deg);
+    left: 320px;
+    top: 10px;
+}
+.ex2{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 320px;
+    top: 10px;
+}
+
+.versus{
+    font-family: 'sporter';
+    text-shadow: 2px 2px 3px #005e08;
+    margin: auto 0px;
+    font-size: 50px;
+
+}
+
+.content-teams{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.teamCard{
+    display: flex;
+    flex-direction: column;
+    border-radius: 37px;
+    border: solid rgb(0, 218, 0);
+    padding: 20px 5%;
+    margin: auto 7%;
+}
+
+.teamName{
+    font-family: 'cali';
+    margin: 0;
+    font-size: 40px;
+}
+
+.escudo{
+    width: 200px;
+    height: 250px;
+    margin-top: 25px;
+}

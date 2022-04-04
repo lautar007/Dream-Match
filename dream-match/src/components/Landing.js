@@ -11,10 +11,10 @@ export default function Landing(){
         <div className="fondo">
             <div className="content">
                 <div className="border">
-                    <img className="ball" src={ball}/>
-                    <img className="curArr1" src={CurArr1}/>
-                    <img className="curArr2" src={CurArr1}/>
-                    <img className="ex" src={ex}/>
+                    <img alt="ball" className="ball" src={ball}/>
+                    <img alt="curArr1" className="curArr1" src={CurArr1}/>
+                    <img alt="curArr2" className="curArr2" src={CurArr1}/>
+                    <img alt="ex" className="ex" src={ex}/>
                     <h1 className="titulo">Dream Teams</h1>
                     <div className="cuadro">
                     <h2 className="subtitulo">EL PARTIDO DE TUS SUEÑOS</h2>
