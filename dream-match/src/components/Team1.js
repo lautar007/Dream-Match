@@ -6,15 +6,16 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import editor from './media/edit.png';
-import { editName1,} from "../actions/actions";
+import { editName1, Reboot1, save1,} from "../actions/actions";
 
 export default function Team1(){
 
     const dispatch = useDispatch();
     const nombre = useSelector((state)=>state.Nombre1);
     const jugadores = useSelector((state)=>state.jugadores);
+    const save = useSelector((state)=>state.Save1);
     const jugadores1 = [jugadores[0],jugadores[1],jugadores[2],jugadores[3],jugadores[4]]
-    console.log(jugadores1);
+    console.log(save);
     const [edit, setEdit] = useState('false')
 
     console.log(jugadores1);
@@ -33,6 +34,40 @@ export default function Team1(){
             setEdit(!edit);
         }
     }
+
+    function handleSave(e){
+        e.preventDefault();
+        dispatch(save1());
+        alert('Equipo 1 Guardado')
+    }
+
+    function handleReboot(e){
+        e.preventDefault();
+        dispatch(Reboot1())
+    }
+
+    function contentSave(){
+        if(nombre !== 'Equipo uno'
+        && jugadores1[0] !== 'jugador 1'
+        && jugadores1[1] !== 'jugador 2'
+        && jugadores1[2] !== 'jugador 3'
+        && jugadores1[3] !== 'jugador 4'
+        && jugadores1[4] !== 'jugador 5'){
+            return(
+                <div className="content-team">
+                    <h1 className="complete">El Equipo 1 está completo</h1>
+                    <button className="back" onClick={(e)=> handleReboot(e)}>Reiniciar Equipo</button>
+                    {
+                        save === false ?
+                       <button className="back" onClick={(e)=> handleSave(e)}>Guardar Equipo</button>
+                       :
+                       null 
+                    }
+                </div>
+            )
+        }
+    }
+
 
 
     return(
@@ -62,7 +97,7 @@ export default function Team1(){
                     return(
                         <div className="content-player">
                             {
-                                j.img != '' ?
+                                j.img !== '' ?
                                 <img alt="foto" className="photo" src={j.img}/>
                                 :
                                 <img alt="foto" className="photo" src={player}/>
@@ -77,6 +112,9 @@ export default function Team1(){
                 })
             }
             </div>
+            {
+                contentSave()
+            }
         </div>
     )
 }

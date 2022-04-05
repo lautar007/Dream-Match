@@ -9,12 +9,12 @@ import { useSelector } from "react-redux";
 export default function Teams(){
 
     const nombre1 = useSelector((state)=>state.Nombre1);
-    const jugador1 = useSelector((state)=>state.jugador11);
-    const jugador2 = useSelector((state)=>state.jugador12);
-    const jugador3 = useSelector((state)=>state.jugador13);
-    const jugador4 = useSelector((state)=>state.jugador14);
-    const jugador5 = useSelector((state)=>state.jugador15);
+    const nombre2 = useSelector((state)=>state.Nombre2);
     const save1 = useSelector((state)=>state.Save1);
+    const save2 = useSelector((state)=>state.Save2);
+    const jugadores = useSelector((state)=>state.jugadores);
+    const jugadores1 = [jugadores[0],jugadores[1],jugadores[2],jugadores[3],jugadores[4]]
+    const jugadores2 = [jugadores[5],jugadores[6],jugadores[7],jugadores[8],jugadores[9]]
 
     return(
         <div>
@@ -31,7 +31,16 @@ export default function Teams(){
                         <img alt="escudo" className="escudo" src={escudo2}/>
                         :
                         <div>
-                            <h1>Div de jugadores</h1>
+                            {
+                                jugadores1.map(j=>{
+                                    return (
+                                        <div className="lista-players">
+                                            <img src={j.img}/>
+                                            <h2>-- {j.nombre}</h2>
+                                        </div>    
+                                    )
+                                })
+                            }
                         </div>
                     }
                     <Link to='/team1'>
@@ -40,8 +49,24 @@ export default function Teams(){
                 </div>
                 <h1 className="versus">VS.</h1>
                 <div className="teamCard">
-                    <h1 className="teamName">Equipo 2</h1>
-                    <img alt="escudo" className="escudo" src={escudo2}/>
+                    <h1 className="teamName">{nombre2}</h1>
+                    {
+                        save2 === false ?
+                        <img alt="escudo" className="escudo" src={escudo2}/>
+                        :
+                        <div>
+                            {
+                                jugadores2.map(j=>{
+                                    return (
+                                        <div className="lista-players">
+                                            <img src={j.img}/>
+                                            <h2>-- {j.nombre}</h2>
+                                        </div>    
+                                    )
+                                })
+                            }
+                        </div>
+                    }
                     <Link to='/team2'>
                     <button className="enter">Definir Jugadores</button>
                     </Link>

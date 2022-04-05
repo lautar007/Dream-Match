@@ -29,18 +29,22 @@ function rootReducer(state = initialState, action){
                 ...state,
                 Nombre1: action.payload
             }
+        case 'EDIT_NAME2':
+            return{
+                ...state,
+                Nombre2: action.payload
+            }
         case 'GET_PLANTEL':
             return{
                 ...state,
                 Plantel: action.payload[0]
             }
-            case 'PUT_PLAYER':
+        case 'PUT_PLAYER':
                 console.log(action.id);
                 return{
                     ...state,
                     jugadores: state.jugadores.map(j=>{
                         if(j.id === parseInt(action.id)){
-                            console.log(j);
                             return {...j,
                                 nombre: action.player,
                                 posición: action.position,
@@ -54,6 +58,58 @@ function rootReducer(state = initialState, action){
                     })
 
                 }
+        case 'SAVE1':
+            return{
+                ...state,
+                Save1: true
+            } 
+        case 'SAVE2':
+            return{
+                ...state,
+                Save2: true
+            } 
+        case 'REBOOT1':
+            var num = 0;
+            return{
+                ...state,
+                Nombre1: 'Equipo uno',
+                Save1: false,
+                jugadores: state.jugadores.map(j=>{
+                    num++;
+                    if(j.id === 11 || 12 || 13 || 14 || 15){
+                        return{
+                            ...j,
+                            nombre: `jugador ${num}`,
+                            posición: 'posición',
+                            img:''
+                        }
+                    }
+                    return{
+                        ...j
+                    }
+                })
+            }
+        case 'REBOOT2':
+            var nume = 0;
+            return{
+                ...state,
+                Nombre1: 'Equipo uno',
+                Save1: false,
+                jugadores: state.jugadores.map(j=>{
+                    nume++;
+                    if(j.id === 21 || 22 || 23 || 24 || 25){
+                        return{
+                            ...j,
+                            nombre: `jugador ${num}`,
+                            posición: 'posición',
+                            img:''
+                        }
+                    }
+                    return{
+                        ...j
+                    }
+                })
+            }
         default:
             return state;
     }
