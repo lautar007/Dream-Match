@@ -44,7 +44,7 @@ export default function Leagues (){
 
                 <Link className="link" to={'/clubs/Copa Argentina/' + edit}>
                 <div className="liga">
-                    <img src="https://img.planetafobal.com/2021/12/copa-argentina-afa-nuevo-logo-2022-ds.jpg"/>
+                    <img src="https://pbs.twimg.com/profile_images/1473725788881145871/HqVzjpzX_400x400.jpg"/>
                     <h2>Copa Argentina</h2>
                 </div>
                 </Link>
