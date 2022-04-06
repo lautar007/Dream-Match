@@ -95,7 +95,7 @@ export default function Team1(){
                 <h1 className="titulo1">{nombre}</h1>
                 <img alt="editor" className="edit" src={editor} onClick={(e)=> handleEdit(e)}/>
                 <Link className="link" to='/teams'>
-                <button className="back">Volver</button>
+                <button className="back1">Volver</button>
                 </Link>
                 {
                     edit === true?

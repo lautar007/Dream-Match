@@ -7,16 +7,22 @@
     .content-team{
         padding: 10px 0px !important;
         display: grid !important;
-        grid-template-columns: 10% auto !important;
+        grid-template-columns: 17% 150% !important;
     }
     .titulo1{
-        font-size: 40px !important;
+        font-size: 30px !important;
     }
     .edit{
         margin: auto 0px auto 300% !important;
     }
     .back{
-        margin: auto 5px auto 50% !important
+        margin: auto 5px auto 50% !important;
+    }
+    .volver1{
+        margin-left: 35px !important;
+    }
+    .back1{
+        margin-right: 100px !important;
     }
     .content-player{
         grid-template-columns: 20% 50% 30%  !important;
@@ -28,10 +34,23 @@
     .photo{
         height: 70px !important;
         width: 70px !important;
+        font-size: 20px !important;
     }
     .editName{
         font-size: 30px !important;
         width: 150px !important;
+    }
+    .enter1{
+        font-size: 20px !important;
+    }
+    .complete{
+        margin-left: 0px !important;
+    }
+    .complete-team{
+        flex-direction: column !important;
+    }
+    .complete-team button{
+        margin: 5px auto !important;
     }
  
 }
@@ -168,4 +187,69 @@
     color:black;
     font-family: 'cali';
     margin-left: 50px;
+}
+
+.volver1{
+    background-color: black;
+    color:#00e900;
+    font-family: 'cali';
+    font-size: 30px;
+    padding: 10px;
+    margin: auto 5px;
+    border: none; 
+    border-radius: 20px;
+    transition: 200ms;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+.volver1:hover{
+    color:black;
+    background-color: rgb(0, 218, 0);
+    border: solid black;
+}
+
+.back1{
+    background-color: black;
+    color:#00e900;
+    font-family: 'cali';
+    font-size: 30px;
+    padding: 10px;
+    margin: auto 5px;
+    border: none; 
+    border-radius: 20px;
+    transition: 200ms;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+.back1:hover{
+    color:black;
+    background-color: rgb(0, 218, 0);
+    border: solid black;
+}
+
+.complete-team{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 218, 0);
+}
+.complete-team button{
+    background-color: black;
+    color:#00e900;
+    font-family: 'cali';
+    font-size: 30px;
+    padding: 10px;
+    margin: auto 5px;
+    border: none; 
+    border-radius: 20px;
+    transition: 200ms;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}
+.complete-team button:hover{
+    color:black;
+    background-color: rgb(0, 218, 0);
+    border: solid black;
 }

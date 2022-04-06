@@ -69,12 +69,12 @@ export default function Team1(){
         }
         else{
             return(
-                <div className="content-team">
+                <div className="complete-team">
                     <h1 className="complete">El Equipo 1 está completo</h1>
-                    <button className="back" onClick={(e)=> handleReboot(e)}>Reiniciar Equipo</button>
+                    <button onClick={(e)=> handleReboot(e)}>Reiniciar Equipo</button>
                     {
                         save === false ?
-                       <button className="back" onClick={(e)=> handleSave(e)}>Guardar Equipo</button>
+                       <button onClick={(e)=> handleSave(e)}>Guardar Equipo</button>
                        :
                        null 
                     }
@@ -92,7 +92,7 @@ export default function Team1(){
                 <h1 className="titulo1">{nombre}</h1>
                 <img alt="editor" className="edit" src={editor} onClick={(e)=> handleEdit(e)}/>
                 <Link className="link" to='/teams'>
-                <button className="back">Volver</button>
+                <button className="back1">Volver</button>
                 </Link>
                 {
                     edit === true?

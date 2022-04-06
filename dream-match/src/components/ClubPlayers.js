@@ -71,16 +71,16 @@ export default function ClubPlayers(){
             {
                 loading === true ?
                 <div>
-                    <h1>Cargando...</h1>
+                    <h1 className="titulo">Cargando...</h1>
                 </div>
                 :
                 <div>
                     <div className="content-team">
                         <img alt="escudo2" className="escudo2" src={plantel.team_badge}/>
                         <h1 className="titulo1">{plantel.team_name}</h1>
-                        <button className="back" onClick={(e)=> window.history.back(e)}>Volver</button>
+                        <button className="volver1" onClick={(e)=> window.history.back(e)}>Volver</button>
                         <Link className="link" to={backTeam()}>
-                        <button className="back">Volver Al Equipo</button>
+                        <button className="back1">Equipo {edit[0]}</button>
                         </Link>
                     </div>
                     {
@@ -89,7 +89,7 @@ export default function ClubPlayers(){
                             <div className="content-player">
                                 <img alt="foto no disponible" className="photo" src={j.player_image}/>
                                 <h2 className="nombre-P">- {j.player_name}</h2>
-                                <h2 className="nombre-P">- {translate(j.player_type)}</h2>
+                                <h2 className="nombre-P1">- {translate(j.player_type)}</h2>
                                 <button 
                                 className="enter1" 
                                 onClick={(e)=> handleSelect(e)} 

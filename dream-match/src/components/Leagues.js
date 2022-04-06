@@ -18,7 +18,7 @@ export default function Leagues (){
             <Link className="link" to={backTeam()}>
             <button className="botonback">Volver al equipo</button>
             </Link>
-            <h1 className="titulo">Selecciona una Liga</h1>
+            <h1>Selecciona una Liga</h1>
             </div>
             <div className="Ligas">
                 <Link className="link" to={'/clubs/UEFA European League/' + edit}>
