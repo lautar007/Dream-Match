@@ -6,15 +6,19 @@ export default function Leagues (){
 
     const {edit} = useParams();
     console.log(edit)
-    
 
+    function backTeam(){
+        if(edit[0] === '1'){ return '/team1'};
+        if(edit[0] === '2'){ return '/team2'};
+    }
+    
     return(
         <div>
             <div className="tituloLiga">
-            <h1 className="titulo">Selecciona una Liga</h1>
-            <Link to='/teams'>
+            <Link className="link" to={backTeam()}>
             <button className="botonback">Volver al equipo</button>
             </Link>
+            <h1 className="titulo">Selecciona una Liga</h1>
             </div>
             <div className="Ligas">
                 <Link className="link" to={'/clubs/UEFA European League/' + edit}>

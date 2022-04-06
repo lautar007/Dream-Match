@@ -1,25 +1,53 @@
+@media screen and (max-width: 900px){
+    .arrow1{
+        display: none;
+    }
+    .arrow2{
+        display: none;
+    }
+    .ex1{
+        display: none;
+    }
+    .ex2{
+        display: none;
+    }
+    .content-teams{
+        flex-direction: column !important;
+    }
+    .versus{
+        margin: 15px 0px !important;
+    }
+    .escudo{
+        margin: auto !important;
+    }
+}
+
 .arrow1{
     transform: rotate(180deg);
     position: absolute;
-    left: 70px;
+    margin-top: 1%;
+    left: 0%;
+    width: 200px;
 }
 .arrow2{
     position: absolute;
-    right: 70px;
+    margin-top: 1%;
+    right: 0%;
+    width: 200px;
 }
 .ex1{
     width: 80px;
     height: 80px;
     position: absolute;
     transform: rotate(180deg);
-    left: 320px;
+    left: 22%;
     top: 10px;
 }
 .ex2{
     width: 80px;
     height: 80px;
     position: absolute;
-    right: 320px;
+    right: 22%;
     top: 10px;
 }
 

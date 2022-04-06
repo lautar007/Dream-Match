@@ -14,11 +14,13 @@ export default function Team1(){
     const nombre = useSelector((state)=>state.Nombre2);
     const jugadores = useSelector((state)=>state.jugadores);
     const save = useSelector((state)=>state.Save2);
-    const jugadores2 = [jugadores[5],jugadores[6],jugadores[7],jugadores[8],jugadores[9]]
+    const jugadores2 = [jugadores[5],jugadores[6],jugadores[7],jugadores[8],jugadores[9]];
+    const list = jugadores2.map(j=> j.nombre);
     console.log(save);
-    const [edit, setEdit] = useState('false')
+    const [edit, setEdit] = useState('false');
+    const [input, setInput] = useState('');
 
-    console.log(jugadores2);
+    console.log(list);
 
     function handleEdit(e){
         e.preventDefault();
@@ -35,6 +37,19 @@ export default function Team1(){
         }
     }
 
+    function handleInputChange(e){
+        e.preventDefault();
+        setInput(e.target.value);
+    }
+
+    function handleInput1(e){
+        e.preventDefault();
+        console.log(e.target.value)
+        dispatch(editName2(e.target.value))
+        setEdit(!edit);
+    }
+
+
     function handleSave(e){
         e.preventDefault();
         dispatch(save2());
@@ -47,12 +62,15 @@ export default function Team1(){
     }
 
     function contentSave(){
-        if(nombre !== 'Equipo uno'
-        && jugadores2[0] !== 'jugador 1'
-        && jugadores2[1] !== 'jugador 2'
-        && jugadores2[2] !== 'jugador 3'
-        && jugadores2[3] !== 'jugador 4'
-        && jugadores2[4] !== 'jugador 5'){
+        if(nombre === 'Equipo dos' 
+        || list[0] === 'jugador 6' 
+        || list[1] === 'jugador 7'
+        || list[2] === 'jugador 8'
+        || list[3] === 'jugador 9'
+        || list[4] === 'jugador 10'){
+         return null
+        }
+        else{
             return(
                 <div className="content-team">
                     <h1 className="complete">El Equipo 2 está completo</h1>
@@ -82,10 +100,12 @@ export default function Team1(){
                 {
                     edit === true?
                     <div className="content-editName">
-                        <input
-                        className="editName"
-                        onKeyDown={(e)=>handleInput(e)}
-                        />
+                    <input
+                    className="editName"
+                    onKeyDown={(e)=>handleInput(e)}
+                    onChange = {(e)=>handleInputChange(e)}
+                    />
+                    <button className="done" value={input} onClick={(e)=>handleInput1(e)}>ok</button>
                     </div>
                     :
                     null
@@ -102,8 +122,8 @@ export default function Team1(){
                                 :
                                 <img alt="foto" className="photo" src={player}/>
                             }
-                        <h2 className="nombre-P">- {j.nombre} -</h2>
-                        <h2 className="nombre-P">- {j.posición} -</h2>
+                        <h2 className="nombre-P">- {j.nombre}</h2>
+                        <h2 className="nombre-P1">- {j.posición}</h2>
                         <Link className="link" to={'/leagues/' + j.id}>
                         <button className="enter1" name={j.nombre}>Editar</button>
                         </Link>

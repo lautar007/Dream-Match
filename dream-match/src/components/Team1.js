@@ -14,9 +14,10 @@ export default function Team1(){
     const nombre = useSelector((state)=>state.Nombre1);
     const jugadores = useSelector((state)=>state.jugadores);
     const save = useSelector((state)=>state.Save1);
-    const jugadores1 = [jugadores[0],jugadores[1],jugadores[2],jugadores[3],jugadores[4]]
-    console.log(save);
-    const [edit, setEdit] = useState('false')
+    const jugadores1 = [jugadores[0],jugadores[1],jugadores[2],jugadores[3],jugadores[4]];
+    const list = jugadores1.map(j=> j.nombre);
+    const [edit, setEdit] = useState('false');
+    const [input, setInput] = useState('');
 
     console.log(jugadores1);
 
@@ -28,11 +29,22 @@ export default function Team1(){
     function handleInput(e){
         if(e.keyCode === 13){
             e.preventDefault();
-            console.log('funciona');
             console.log(e.target.value)
             dispatch(editName1(e.target.value))
             setEdit(!edit);
         }
+    }
+
+    function handleInputChange(e){
+        e.preventDefault();
+        setInput(e.target.value);
+    }
+
+    function handleInput1(e){
+        e.preventDefault();
+        console.log(e.target.value)
+        dispatch(editName1(e.target.value))
+        setEdit(!edit);
     }
 
     function handleSave(e){
@@ -47,12 +59,15 @@ export default function Team1(){
     }
 
     function contentSave(){
-        if(nombre !== 'Equipo uno'
-        && jugadores1[0] !== 'jugador 1'
-        && jugadores1[1] !== 'jugador 2'
-        && jugadores1[2] !== 'jugador 3'
-        && jugadores1[3] !== 'jugador 4'
-        && jugadores1[4] !== 'jugador 5'){
+        if(nombre === 'Equipo uno' 
+        || list[0] === 'jugador 1' 
+        || list[1] === 'jugador 2'
+        || list[2] === 'jugador 3'
+        || list[3] === 'jugador 4'
+        || list[4] === 'jugador 5'){
+         return null
+        }
+        else{
             return(
                 <div className="content-team">
                     <h1 className="complete">El Equipo 1 está completo</h1>
@@ -85,7 +100,9 @@ export default function Team1(){
                         <input
                         className="editName"
                         onKeyDown={(e)=>handleInput(e)}
+                        onChange = {(e)=>handleInputChange(e)}
                         />
+                        <button className="done" value={input} onClick={(e)=>handleInput1(e)}>ok</button>
                     </div>
                     :
                     null
@@ -102,8 +119,8 @@ export default function Team1(){
                                 :
                                 <img alt="foto" className="photo" src={player}/>
                             }
-                        <h2 className="nombre-P">- {j.nombre} -</h2>
-                        <h2 className="nombre-P">- {j.posición} -</h2>
+                        <h2 className="nombre-P">- {j.nombre}</h2>
+                        <h2 className="nombre-P1">- {j.posición}</h2>
                         <Link className="link" to={'/leagues/' + j.id}>
                         <button className="enter1" name={j.nombre}>Editar</button>
                         </Link>

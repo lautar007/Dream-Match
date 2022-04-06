@@ -88,8 +88,8 @@ export default function ClubPlayers(){
                         return(
                             <div className="content-player">
                                 <img alt="foto no disponible" className="photo" src={j.player_image}/>
-                                <h2 className="nombre-P">- {j.player_name} -</h2>
-                                <h2 className="nombre-P">- {translate(j.player_type)} -</h2>
+                                <h2 className="nombre-P">- {j.player_name}</h2>
+                                <h2 className="nombre-P">- {translate(j.player_type)}</h2>
                                 <button 
                                 className="enter1" 
                                 onClick={(e)=> handleSelect(e)} 

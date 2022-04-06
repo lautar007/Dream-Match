@@ -1,3 +1,41 @@
+@media screen and (max-width: 900px){
+    .escudo1{
+        width: 50px !important;
+        height: 55px !important;
+        margin: 10px !important;
+    }
+    .content-team{
+        padding: 10px 0px !important;
+        display: grid !important;
+        grid-template-columns: 10% auto !important;
+    }
+    .titulo1{
+        font-size: 40px !important;
+    }
+    .edit{
+        margin: auto 0px auto 300% !important;
+    }
+    .back{
+        margin: auto 5px auto 50% !important
+    }
+    .content-player{
+        grid-template-columns: 20% 50% 30%  !important;
+        padding: 20px 10px !important;
+    }
+    .nombre-P1{
+        display: none;
+    }
+    .photo{
+        height: 70px !important;
+        width: 70px !important;
+    }
+    .editName{
+        font-size: 30px !important;
+        width: 150px !important;
+    }
+ 
+}
+
 .link{
     margin: auto;
     text-decoration: none;
@@ -20,6 +58,7 @@
     font-size: 60px;
     color:black;
     margin: auto 8%;
+    max-width: 300px;
 }
 
 .edit{
@@ -29,6 +68,8 @@
     cursor: pointer;
 }
 .content-editName{
+    display: flex;
+    flex-direction: row;
     position: absolute;
     background-color: black;
     padding: 15px;
@@ -44,6 +85,18 @@
     background-color: black;
     color:#00e900;
 }
+.done{
+    background-color: #00e900;
+    font-family: 'cali';
+    font-size: 30px;
+    padding: 10px;
+    margin: auto 20px;
+    border: none; 
+    border-radius: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
 
 .back{
     background-color: black;
@@ -51,7 +104,7 @@
     font-family: 'cali';
     font-size: 30px;
     padding: 10px;
-    margin: 10px auto;
+    margin: auto 5px;
     border: none; 
     border-radius: 20px;
     transition: 200ms;
@@ -80,6 +133,12 @@
     font-size: 30px;
 }
 .nombre-P{
+    color:rgb(0, 218, 0);
+    font-family: 'cali';
+    margin: auto 2%;
+    font-size: 30px;
+}
+.nombre-P1{
     color:rgb(0, 218, 0);
     font-family: 'cali';
     margin: auto 2%;

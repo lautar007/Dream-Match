@@ -17,14 +17,14 @@ export default function Landing(){
                     <img alt="ex" className="ex" src={ex}/>
                     <h1 className="titulo">Dream Teams</h1>
                     <div className="cuadro">
-                    <h2 className="subtitulo">EL PARTIDO DE TUS SUEÑOS</h2>
-                    <h2 className="text">Crea dos equipos de fútbol con tus jugadores favoritos</h2>
+                        <h2 className="subtitulo">EL PARTIDO DE TUS SUEÑOS</h2>
+                        <h2 className="text">Crea dos equipos de fútbol con tus jugadores favoritos</h2>
+                    </div>
+                    <Link to='/teams'>
+                    <button className="enter">Entrar</button>
+                    </Link>
                 </div>
-                <Link to='/teams'>
-                <button className="enter">Entrar</button>
-                </Link>
             </div>
-        </div>
             <div className="img">
             </div>
         </div>

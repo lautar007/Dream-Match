@@ -21,7 +21,6 @@ function App() {
        <Route exact path='/leagues/:edit' element = {<Leagues/>}/>
        <Route exact path='/clubs/:league/:edit' element = {<Clubs/>}/>
        <Route exact path='/clubPlayers/:club/:edit' element = {<ClubPlayers/>}/>
-       <Route exact path='/player/:name' element = {<Player/>}/>
      </Routes>
    </div>
   </BrowserRouter>

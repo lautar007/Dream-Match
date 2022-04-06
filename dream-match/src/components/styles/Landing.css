@@ -21,6 +21,42 @@ h1{
     src: url('../fonts/dealerplate\ california.ttf');
 }
 
+@media screen and (max-width: 900px){
+   .img{
+       display: none;
+   }
+   .ball{
+    top: -270px !important;
+   }
+   .border{
+       border: none !important;
+       margin: 55% 10% !important;
+       width: 120% !important;
+   }
+   .titulo{
+       font-size: 80px !important;
+       margin-bottom: 15px !important;
+   }
+   .cuadro{
+       margin: auto !important;
+   }
+   .subtitulo{
+       font-size: 30px !important;
+    
+   }
+   .curArr1{
+       display: none;
+   }
+   .curArr2{
+    transform: rotate(100deg) !important;
+    left: 35% !important;
+    bottom: -7% !important;
+   }
+   .ex{
+    left: 65% !important;
+   }
+}
+
 .fondo{
     display: flex;
     flex-direction: row;
@@ -60,22 +96,28 @@ h1{
 }
 
 .curArr1{
+    width: 100px;
+    height: 35%;
     position: absolute;
-    top: 20px;
-    right: 430px;
+    top: 0%;
+    right: 40%;
+    transform: rotate(270deg);
 }
 .curArr2{
     position:absolute;
-    transform: rotate(150deg);
-    bottom: -15px;
-    left: 25px;
+    width: 100px;
+    height: 35%;
+    transform: rotate(120deg);
+    bottom: -3%;
+    left: 10%;
 }
 .ex{
     position: absolute;
-    width: 120px;
-    height: 120px;
-    bottom: 20px;
-    left: 200px;
+    transform: rotate(300deg);
+    width: 70px;
+    height: 70px;
+    bottom: 14%;
+    left: 20%;
 }
 
 .cuadro{

@@ -132,10 +132,8 @@ export default function Clubs(){
     return(
         <div>
             <div className="tituloLiga">
+            <button className="botonback" onClick={(e)=> window.history.back(e)}>Volver a Ligas</button>
             <h1 className="titulo">{league} </h1>
-            <Link to='/leagues'>
-            <button className="botonback">Volver a Ligas</button>
-            </Link>
             </div>
             {
                 showTeams()
