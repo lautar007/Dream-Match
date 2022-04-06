@@ -32,7 +32,7 @@ También puedes visitar el proyecto en la web, a través de cualquier dispositiv
 
 https://dream-match.vercel.app/
 
-Te invito a que veas mis otros repositorios aquí en mi peril de GitHub, y también a conocer mis proyectos en mi portfolio web: 
+Te invito a que veas mis otros repositorios aquí en mi perfil de GitHub, y también a conocer mis proyectos en mi portfolio web: 
 
 https://myportal-web.vercel.app/
 
